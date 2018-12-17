@@ -1370,5 +1370,95 @@ export default courseSlug =>
           },
         ],
       },
+
+      {
+        slug: 'redux-and-the-state-adt',
+        dependencies: {
+          crocks: '^0.11.0',
+          esm: '^3.0.84',
+          eyes: '^0.1.8',
+          nodemon: '^1.18.5',
+          redux: '^4.0.1',
+        },
+      },
+      {
+        slug: 'reusable-stateful-logic-with-react-hooks',
+        dependencies: {
+          react: '^16.7.0-alpha.0',
+          emotion: '^9.2.12',
+          'lodash.uniqueid': '4^.0.1',
+        },
+      },
+      {
+        slug: 'graphql-data-in-react-with-apollo-client',
+        dependencies: {
+          'apollo-boost': '^0.1.22',
+          graphql: '^14.0.2',
+          react: '^16.4.2',
+        },
+      },
+      {
+        slug: 'reactive-state-management-in-angular-with-ngrx',
+        dependencies: {
+          angular: '^7.0.3',
+          'ngrx/store': '6.1.2',
+          '@nrwl/nx': '7.1.1',
+          'core-js': '^2.5.4',
+          hammerjs: '^2.0.8',
+          jsonwebtoken: '^8.3.0',
+          moment: '^2.22.2',
+          rxjs: '^6.0.0',
+        },
+      },
+      {
+        slug: 'simplify-react-apps-with-react-hooks',
+        dependencies: {
+          emotion: '10.0.0-beta.8',
+          react: '16.7.0-alpha.2',
+          'reach/router': '1.2.1',
+          'date-fns': '1.29.0',
+          'graphql-request': '1.8.2',
+          'match-sorter': '2.3.0',
+          'netlify-auth-providers': '1.0.0-alpha5',
+          'prop-types': '15.6.2',
+        },
+      },
+      {
+        slug: 'build-a-neo4j-graphql-api',
+        dependencies: {
+          axios: '^0.18.0',
+          'apollo-server': '^2.2.2',
+          'graphql-request': '^1.8.2',
+          'neo4j-driver': '^1.7.1',
+          'neo4j-graphql-js': '^1.0.5',
+        },
+      },
+      {
+        slug: 'start-using-elm-to-build-web-applications',
+        dependencies: {
+          elm: '0.17',
+        },
+        reviews: [
+          {
+            performedOn: '2018-12-14',
+            performedBy: '21147',
+            scopeOfReview: 'quick course review',
+            notes: [
+              {
+                type: 'major issue',
+                title: 'elm-lang moved to elm',
+                details:
+                  'Since version 0.19 elm-lang/* packages have been moved over to elm/*',
+              },
+              {
+                type: 'major issue',
+                title: 'Elm.MODULENAME.fullscreen deprecated',
+                details:
+                  'Elm.MODULENAME.fullscreen has been deprecated in favor of Elm.MODULENAME.init',
+              },
+            ],
+          },
+        ],
+      },
     ],
   )
