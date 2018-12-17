@@ -4,7 +4,7 @@ Merge your dependency JSON here!
 
 This is how we want Pull Requests to look.
 
-![How PR's should look](./images/how-prs-should-look.png)
+![How PR's should look](https://res.cloudinary.com/dg3gyk0gu/image/upload/v1545085962/transcript-images/how-prs-should-look.png)
 
 You'll create a new branch starting with your initials followed by a forward slash ie. 'Lm/'. The rest of the branch name should be the slug of the course that you are adding to the master file. 
 
@@ -16,7 +16,7 @@ The last think you have to have is a gif. If you forget to add a gif, you will n
 
 This is that text should look. 
 
-![](./images/code-of-the-preview.png)
+![code of the preview](http://res.cloudinary.com/dg3gyk0gu/image/upload/v1545085962/transcript-images/code-of-the-preview.png)
 
 Here is an example of what the course dependency should look like.
 
