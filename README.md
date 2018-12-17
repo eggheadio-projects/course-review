@@ -16,7 +16,7 @@ The last think you have to have is a gif. If you forget to add a gif, you will n
 
 This is that text should look. 
 
-![code of the preview](http://res.cloudinary.com/dg3gyk0gu/image/upload/v1545085962/transcript-images/code-of-the-preview.png)
+![code of the preview](https://res.cloudinary.com/dg3gyk0gu/image/upload/v1545085962/transcript-images/code-of-the-preview.png)
 
 Here is an example of what the course dependency should look like.
 
