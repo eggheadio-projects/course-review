@@ -1,4 +1,4 @@
-import { find } from 'lodash'
+import {find} from 'lodash'
 export default courseSlug =>
   find(
     [
@@ -603,12 +603,69 @@ export default courseSlug =>
         },
       },
       {
-        slug: 'use-typescript-to-develop-react-applications',
-        dependencies: {
-          react: '^16.0.0',
-          typescript: '2.5',
+        "slug": "use-typescript-to-develop-react-applications",
+        "dependencies": {
+          "React": "16.0.0",
+          "TypeScript": "2.5",
+          "ts-jest": "22.4.6",
+          "Enzyme": "3.3.0",
+          "webpack": "3.8.1"
         },
-      },
+        "reviews": [
+          {
+            "performedOn": "2019-01-19",
+            "performedBy": "Parker Landon",
+            "scopeOfReview": "full course lesson review",
+            "notes": [
+              {
+                "type": "minor issue",
+                "title": "Cannot find module",
+                "details": "When running npm start, returned the following:\nTS2307: Cannot find module 'enzyme'.\nTS2307: Cannot find module 'enzyme-adapter-react-16'.\nTS2307: Cannot find module 'enzyme'.\nTS2304: Cannot find name 'test'.\nTS2304: Cannot find name 'expect'.\nTS2304: Cannot find name 'expect'.\nwebpack: Failed to compile.\nDespite these errors, I was still able to access localhost and the code worked.",
+                "lessons": [
+                  "react-test-react-components-and-dom-using-enzyme"
+                ],
+                "dependency": "Enzyme"
+              },
+              {
+                "type": "major issue",
+                "title": "Error",
+                "details": "User reported error:\n\nAlso for webpack.config.js I had to add 'exclude: /node_modules/' in the rules because it was giving me a weird error - this is what my module.exports looks like:\n\n   module: {\n       rules: [\n           {\n               test: /\\.tsx$/,\n               loader: 'ts-loader',\n               exclude: '/node_modules/'\n           },\n           {\n               test: /\\.ts$/,\n               loader: 'ts-loader',\n               exclude: '/node_modules/'\n           }\n       ]\n   }",
+                "lessons": [
+                  "react-test-react-components-and-dom-using-enzyme"
+                ],
+                "dependency": "webpack"
+              },
+              {
+                "type": "major issue",
+                "title": "TypeError: EnzymeAdapter is not a constructor",
+                "details": "This issue and solution came from a viewer:\n\n\"     2 | import * as EnzymeAdapter from 'enzyme-adapter-react-16';\n     3 |\n   > 4 | configure({ adapter: new EnzymeAdapter() });\n       |                      ^\n\n     at Object.<anonymous> (src/setupEnzyme.ts:4:22)\n\nI went to the enzyme-adapter-react-16 page and followed exactly what they said - this did it (unclear why this fixed the problem?? but it worked):\n\nimport Enzyme from 'enzyme';\nimport Adapter from 'enzyme-adapter-react-16';\n\nEnzyme.configure({ adapter: new Adapter() })\"",
+                "lessons": [
+                  "react-test-react-components-and-dom-using-enzyme"
+                ],
+                "dependency": "Enzyme"
+              },
+              {
+                "type": "major issue",
+                "title": "validation error",
+                "details": "\"Module ts-jest in the transform option was not found.\"",
+                "lessons": [
+                  "react-test-react-components-and-dom-using-enzyme"
+                ],
+                "dependency": "ts-jest"
+              },
+              {
+                "type": "minor issue",
+                "title": "Depreciation Warning",
+                "details": "Option \"setupTestFrameworkScriptFile\" was replaced by configuration \"setupFilesAfterEnv\". New configuration is type array instead of type string.",
+                "lessons": [
+                  "react-test-react-components-and-dom-using-enzyme"
+                ],
+                "dependency": "ts-jest"
+              }
+            ]
+          }
+        ]
+      }
       {
         slug: 'optimistic-ui-updates-in-react',
         dependencies: {
@@ -1370,7 +1427,6 @@ export default courseSlug =>
           },
         ],
       },
-
       {
         slug: 'redux-and-the-state-adt',
         dependencies: {
@@ -1460,5 +1516,367 @@ export default courseSlug =>
           },
         ],
       },
+      {
+        slug: 'practical-advanced-typescript',
+        dependencies: {
+          typescript: '^3.0.0',
+        },
+      },
+      {
+        slug: 'use-typescript-to-develop-vue-js-web-applications',
+        dependencies: {
+          vue: '^2.2.6',
+          typescript: '^2.3.2',
+        },
+      },
+      {
+        slug: 'vue-js-state-management-with-vuex-and-typescript',
+        dependencies: {
+          vue: '^2.2.6',
+          vuex: '^2.3.1',
+          typescript: '^2.3.2',
+        },
+      },
+      {
+        slug: 'build-algorithms-using-typescript',
+        dependencies: {
+          typescript: '^2.1.4',
+        },
+      },
+      {
+        slug: 'async-await-using-typescript',
+        dependencies: {
+          '@types/node': '8.0.53',
+        },
+      },
+      {
+        slug: 'advanced-static-types-in-typescript',
+        dependencies: {
+          typescript: '^2.0.0',
+        },
+      },
+      {
+        slug: 'build-angular-1-x-apps-with-redux',
+        dependencies: {
+          angular: '1.5.7',
+        },
+      },
+      {
+        slug: 'use-types-effectively-in-typescript',
+        dependencies: {
+          typescript: '^2.0.0',
+        },
+      },
+      {
+        slug: 'reduce-redux-boilerplate-with-redux-actions',
+        dependencies: {
+          redux: '^3.6.0',
+          react: '^15.5.4',
+        },
+      },
+      {
+        slug: 'build-a-twelve-factor-node-js-app-with-docker',
+        dependencies: {
+          mongodb: '^2.2.26',
+          express: '^4.16.2',
+        },
+      },
+      {
+        slug: 'end-to-end-testing-with-google-s-puppeteer-and-jest',
+        dependencies: {
+          react: '^16.2.0',
+          puppeteer: '^0.13.0',
+          jest: '^22.0.4',
+        },
+      },
+      {
+        slug: 'build-a-node-js-rest-api-with-loopback',
+        dependencies: {
+          loopback: '^3.0.0',
+        },
+      },
+      {
+        slug: 'integrate-ibm-domino-with-node-js',
+        dependencies: {
+          express: '^4.16.3',
+        },
+      },
+      {
+        slug: 'offline-first-progressive-web-apps-pwa-in-vue-js',
+        dependencies: {
+          vue: '^2.5.2',
+        },
+      },
+      {
+        slug: 'real-world-react-native-animations',
+        dependencies: {
+          react: '^15.4.0',
+          'react-native': '0.38.0',
+        },
+      },
+      {
+        slug: 'angular-and-webpack-for-modular-applications',
+        dependencies: {
+          angular: '^1.5.0-rc.0',
+          webpack: '^1.7.2',
+        },
+      },
+      {
+        slug: 'asynchronous-javascript-with-async-await',
+        dependencies: {
+          typescript: '^2.3.0',
+        },
+      },
+      {
+        slug: 'understand-how-to-style-angular-components',
+        dependencies: {
+          angular: '5',
+        },
+      },
+      {
+        slug: 'fundamentals-of-react-native-video',
+        dependencies: {
+          'react-native': '^0.44.2',
+          'react-native-video': '^1.0.0',
+        },
+      },
+      {
+        slug: 'develop-basic-web-apps-with-vue-js',
+        dependencies: {
+          vue: '^2.5.16',
+        },
+      },
+      {
+        slug: 'vue-update-vuex-state-with-mutations-and-mapmutations-in-vue-js',
+        dependencies: {
+          nuxt: '^2.0.0',
+        },
+      },
+      {
+        slug: 'create-a-news-app-with-vue-js-and-nuxt',
+        dependencies: {
+          nuxt: '^1.0.0-rc3',
+        },
+      },
+      {
+        slug: 'advanced-fine-grained-control-of-vue-js-components',
+        dependencies: {
+          vue: '^2.5.9',
+        },
+      },
+      {
+        slug: 'build-node-js-apis-with-openapi-spec-swagger',
+        dependencies: {
+          express: '^4.12.3',
+        },
+      },
+      {
+        slug: 'angularjs-authentication-with-jwt',
+        dependencies: {
+          angular: '^1.2.25',
+        },
+      },
+      {
+        slug: 'publish-javascript-packages-on-npm',
+        dependencies: {
+          'babel-cli': '^6.18.0',
+        },
+      },
+      {
+        slug: 'use-webpack-2-for-production-javascript-applications',
+        dependencies: {
+          webpack: '^2.1.0',
+          babel: '6.5.2',
+        },
+      },
+      {
+        slug: 'learn-protractor-testing-for-angularjs',
+        dependencies: {
+          protractor: '^1.4.0',
+          angular: '^1.2.8',
+        },
+      },
+      {
+        slug: 'getting-started-with-express-js',
+        dependencies: {
+          express: '^4.13.1',
+        },
+      },
+      {
+        slug: 'end-to-end-testing-with-cypress',
+        dependencies: {
+          cypress: '^1.4.1',
+          react: '^16.0.0',
+        },
+      },
+      {
+        slug: 'advanced-react-component-patterns',
+        dependencies: {
+          react: '^16.3.2',
+          redux: '^3.7.2',
+        },
+      },
+      {
+        slug: 'introduction-to-the-python-3-programming-language',
+        dependencies: {
+          python: '3',
+        },
+      },
+      {
+        slug:
+          'build-user-interfaces-by-composing-css-utility-classes-with-tailwind',
+        dependencies: {
+          tailwindcss: '^0.1.3',
+        },
+      },
+      {
+        slug: 'maintainable-css-using-typestyle',
+        dependencies: {
+          typescript: '2.2.1',
+          react: '^15.4.2',
+        },
+      },
+      {
+        slug: 'create-your-own-twitter-bots',
+        dependencies: {
+          twit: '^2.2.5',
+        },
+      },
+      {
+        slug: 'introduction-to-node-servers-with-hapi-js',
+        dependencies: {
+          hapi: '^11.0.3',
+        },
+      },
+      {
+        slug: 'make-webpack-easy-with-poi',
+        dependencies: {
+          poi: '^9.0.0',
+        },
+      },
+      {
+        slug: 'angularjs-data-modeling',
+        dependencies: {
+          angular: '^1.2.23',
+        },
+      },
+      {
+        slug: 'using-angular-2-patterns-in-angular-1-x-apps',
+        dependencies: {
+          angular: '^1.5.7',
+        },
+      },
+      {
+        slug: 'angular-automation-with-gulp',
+        dependencies: {
+          gulp: '^3.8.11',
+          angular: '^1.4.7',
+        },
+      },
+      {
+        slug: 'introduction-to-angular-material',
+        dependencies: {
+          'angular-material': '^1.1.12',
+          angular: '^1.5.6',
+        },
+      },
+      {
+        slug: 'natural-language-processing-in-javascript-with-natural',
+        dependencies: {
+          natural: '^0.4.0',
+        },
+      },
+      {
+        slug: 'angularjs-fundamentals',
+        dependencies: {
+          angular: '^1.6.5',
+        },
+      },
+      {
+        slug: 'build-interactive-javascript-charts-with-d3-v4',
+        dependencies: {
+          d3: '^4.1.1',
+        },
+      },
+      {
+        slug: 'using-postgres-window-functions',
+        dependencies: {
+          PostgreSQL: '^9.6',
+        },
+      },
+      {
+        slug: 'learn-how-to-use-immutable-js',
+        dependencies: {
+          immutable: '^3.8.1',
+        },
+      },
+      {
+        slug: 'get-started-with-postgresql',
+        dependencies: {
+          PostgreSQL: '^9.6',
+        },
+      },
+      {
+        slug: 'asynchronous-programming-the-end-of-the-loop',
+        dependencies: {
+          rxjs: '^2.3',
+        },
+      },
+      {
+        slug: 'learn-the-best-and-most-useful-scss',
+        dependencies: {
+          'node-sass': '^3.11',
+        },
+      },
+      {
+        slug: 'cycle-js-fundamentals',
+        dependencies: {
+          cycle: '^3.1',
+        },
+      },
+      {
+        slug: 'understand-joins-and-unions-in-postgres',
+        dependencies: {
+          PostgreSQL: '9.4.5',
+        },
+      },
+      {
+        slug: 'use-d3-v3-to-build-interactive-charts-with-javascript',
+        dependencies: {
+          d3: '^3.5',
+        },
+      },
+      {
+        slug: 'creating-custom-web-elements-with-polymer-2',
+        dependencies: {
+          polymer: '1.2 - 1.11',
+        },
+      },
+      {
+        slug: 'get-started-with-elasticsearch',
+        dependencies: {
+          elasticsearch: '^12.1.3',
+        },
+      },
+      {
+        slug: 'ember-2-fundamentals',
+        dependencies: {
+          ember: '~2.5',
+        },
+      },
+      {
+        slug: 'building-an-angular-1-x-ionic-application',
+        dependencies: {
+          angular: '1.5.5',
+          ionic: '1.2.1',
+        },
+      },
+      {
+        slug: 'up-and-running-with-typescript',
+        dependencies: {
+          typescript: '^3.2.1',
+        },
+      },
     ],
+    {slug: courseSlug},
   )
