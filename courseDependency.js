@@ -1628,11 +1628,21 @@ export default courseSlug =>
         },
       },
       {
-        slug: 'understand-how-to-style-angular-components',
-        dependencies: {
-          angular: '5',
+        "slug": "understand-how-to-style-angular-components",
+        "dependencies": {
+          "angular": "5.2.0 - 7.2.2",
+          "core-js": "2.4.1 - 2.6.3",
+          "rxjs": "5.5.6 - 6.3.3",
         },
-      },
+        "reviews": [
+          {
+            "performedOn": "2019-01-28",
+            "performedBy": "Haze Provinsal",
+            "scopeOfReview": "full course lesson review",
+            "notes": []
+          }
+        ]
+      }
       {
         slug: 'fundamentals-of-react-native-video',
         dependencies: {
