@@ -1,7 +1,7 @@
 ##  [COURSE NAME](COURSE LINK)
 
 ### ⏲️ # Minutes
-### 💰 # Dollars
+### 💰 $3.25 x Minutes = Dollars
 
 ### 🛠 Setup
 - Navigate to [review.egghead.io](https://review.egghead.io/)
