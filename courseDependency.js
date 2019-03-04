@@ -603,69 +603,64 @@ export default courseSlug =>
         },
       },
       {
-        "slug": "use-typescript-to-develop-react-applications",
-        "dependencies": {
-          "React": "16.0.0",
-          "TypeScript": "2.5",
-          "ts-jest": "22.4.6",
-          "Enzyme": "3.3.0",
-          "webpack": "3.8.1"
+        slug: 'use-typescript-to-develop-react-applications',
+        dependencies: {
+          React: '16.0.0',
+          TypeScript: '2.5',
+          'ts-jest': '22.4.6',
+          Enzyme: '3.3.0',
+          webpack: '3.8.1',
         },
-        "reviews": [
+        reviews: [
           {
-            "performedOn": "2019-01-19",
-            "performedBy": "Parker Landon",
-            "scopeOfReview": "full course lesson review",
-            "notes": [
+            performedOn: '2019-01-19',
+            performedBy: 'Parker Landon',
+            scopeOfReview: 'full course lesson review',
+            notes: [
               {
-                "type": "minor issue",
-                "title": "Cannot find module",
-                "details": "When running npm start, returned the following:\nTS2307: Cannot find module 'enzyme'.\nTS2307: Cannot find module 'enzyme-adapter-react-16'.\nTS2307: Cannot find module 'enzyme'.\nTS2304: Cannot find name 'test'.\nTS2304: Cannot find name 'expect'.\nTS2304: Cannot find name 'expect'.\nwebpack: Failed to compile.\nDespite these errors, I was still able to access localhost and the code worked.",
-                "lessons": [
-                  "react-test-react-components-and-dom-using-enzyme"
-                ],
-                "dependency": "Enzyme"
+                type: 'minor issue',
+                title: 'Cannot find module',
+                details:
+                  "When running npm start, returned the following:\nTS2307: Cannot find module 'enzyme'.\nTS2307: Cannot find module 'enzyme-adapter-react-16'.\nTS2307: Cannot find module 'enzyme'.\nTS2304: Cannot find name 'test'.\nTS2304: Cannot find name 'expect'.\nTS2304: Cannot find name 'expect'.\nwebpack: Failed to compile.\nDespite these errors, I was still able to access localhost and the code worked.",
+                lessons: ['react-test-react-components-and-dom-using-enzyme'],
+                dependency: 'Enzyme',
               },
               {
-                "type": "major issue",
-                "title": "Error",
-                "details": "User reported error:\n\nAlso for webpack.config.js I had to add 'exclude: /node_modules/' in the rules because it was giving me a weird error - this is what my module.exports looks like:\n\n   module: {\n       rules: [\n           {\n               test: /\\.tsx$/,\n               loader: 'ts-loader',\n               exclude: '/node_modules/'\n           },\n           {\n               test: /\\.ts$/,\n               loader: 'ts-loader',\n               exclude: '/node_modules/'\n           }\n       ]\n   }",
-                "lessons": [
-                  "react-test-react-components-and-dom-using-enzyme"
-                ],
-                "dependency": "webpack"
+                type: 'major issue',
+                title: 'Error',
+                details:
+                  "User reported error:\n\nAlso for webpack.config.js I had to add 'exclude: /node_modules/' in the rules because it was giving me a weird error - this is what my module.exports looks like:\n\n   module: {\n       rules: [\n           {\n               test: /\\.tsx$/,\n               loader: 'ts-loader',\n               exclude: '/node_modules/'\n           },\n           {\n               test: /\\.ts$/,\n               loader: 'ts-loader',\n               exclude: '/node_modules/'\n           }\n       ]\n   }",
+                lessons: ['react-test-react-components-and-dom-using-enzyme'],
+                dependency: 'webpack',
               },
               {
-                "type": "major issue",
-                "title": "TypeError: EnzymeAdapter is not a constructor",
-                "details": "This issue and solution came from a viewer:\n\n\"     2 | import * as EnzymeAdapter from 'enzyme-adapter-react-16';\n     3 |\n   > 4 | configure({ adapter: new EnzymeAdapter() });\n       |                      ^\n\n     at Object.<anonymous> (src/setupEnzyme.ts:4:22)\n\nI went to the enzyme-adapter-react-16 page and followed exactly what they said - this did it (unclear why this fixed the problem?? but it worked):\n\nimport Enzyme from 'enzyme';\nimport Adapter from 'enzyme-adapter-react-16';\n\nEnzyme.configure({ adapter: new Adapter() })\"",
-                "lessons": [
-                  "react-test-react-components-and-dom-using-enzyme"
-                ],
-                "dependency": "Enzyme"
+                type: 'major issue',
+                title: 'TypeError: EnzymeAdapter is not a constructor',
+                details:
+                  "This issue and solution came from a viewer:\n\n\"     2 | import * as EnzymeAdapter from 'enzyme-adapter-react-16';\n     3 |\n   > 4 | configure({ adapter: new EnzymeAdapter() });\n       |                      ^\n\n     at Object.<anonymous> (src/setupEnzyme.ts:4:22)\n\nI went to the enzyme-adapter-react-16 page and followed exactly what they said - this did it (unclear why this fixed the problem?? but it worked):\n\nimport Enzyme from 'enzyme';\nimport Adapter from 'enzyme-adapter-react-16';\n\nEnzyme.configure({ adapter: new Adapter() })\"",
+                lessons: ['react-test-react-components-and-dom-using-enzyme'],
+                dependency: 'Enzyme',
               },
               {
-                "type": "major issue",
-                "title": "validation error",
-                "details": "\"Module ts-jest in the transform option was not found.\"",
-                "lessons": [
-                  "react-test-react-components-and-dom-using-enzyme"
-                ],
-                "dependency": "ts-jest"
+                type: 'major issue',
+                title: 'validation error',
+                details:
+                  '"Module ts-jest in the transform option was not found."',
+                lessons: ['react-test-react-components-and-dom-using-enzyme'],
+                dependency: 'ts-jest',
               },
               {
-                "type": "minor issue",
-                "title": "Depreciation Warning",
-                "details": "Option \"setupTestFrameworkScriptFile\" was replaced by configuration \"setupFilesAfterEnv\". New configuration is type array instead of type string.",
-                "lessons": [
-                  "react-test-react-components-and-dom-using-enzyme"
-                ],
-                "dependency": "ts-jest"
-              }
-            ]
-          }
-        ]
-      }
+                type: 'minor issue',
+                title: 'Depreciation Warning',
+                details:
+                  'Option "setupTestFrameworkScriptFile" was replaced by configuration "setupFilesAfterEnv". New configuration is type array instead of type string.',
+                lessons: ['react-test-react-components-and-dom-using-enzyme'],
+                dependency: 'ts-jest',
+              },
+            ],
+          },
+        ],
+      },
       {
         slug: 'optimistic-ui-updates-in-react',
         dependencies: {
@@ -1192,8 +1187,15 @@ export default courseSlug =>
       {
         slug: 'getting-started-with-angular-elements',
         dependencies: {
-          angular: '^6.0.0',
+          angular: '^7.0.0',
         },
+        reviews: [
+          {
+            performedOn: '2019-02-13',
+            performedBy: 186087,
+            scopeOfReview: 'pre publish lesson review',
+          },
+        ],
       },
       {
         slug: 'design-systems-with-react-and-typescript-in-storybook',
@@ -1628,21 +1630,21 @@ export default courseSlug =>
         },
       },
       {
-        "slug": "understand-how-to-style-angular-components",
-        "dependencies": {
-          "angular": "5.2.0 - 7.2.2",
-          "core-js": "2.4.1 - 2.6.3",
-          "rxjs": "5.5.6 - 6.3.3",
+        slug: 'understand-how-to-style-angular-components',
+        dependencies: {
+          angular: '5.2.0 - 7.2.2',
+          'core-js': '2.4.1 - 2.6.3',
+          rxjs: '5.5.6 - 6.3.3',
         },
-        "reviews": [
+        reviews: [
           {
-            "performedOn": "2019-01-28",
-            "performedBy": "Haze Provinsal",
-            "scopeOfReview": "full course lesson review",
-            "notes": []
-          }
-        ]
-      }
+            performedOn: '2019-01-28',
+            performedBy: 'Haze Provinsal',
+            scopeOfReview: 'full course lesson review',
+            notes: [],
+          },
+        ],
+      },
       {
         slug: 'fundamentals-of-react-native-video',
         dependencies: {
