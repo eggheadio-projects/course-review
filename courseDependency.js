@@ -552,7 +552,15 @@ export default courseSlug =>
       {
         slug: 'add-internationalization-i18n-to-a-react-app-using-react-intl',
         dependencies: {
-          react: '15 - 16',
+          "react": '15 - 16.8.4',
+          "enzyme": "3.9.0",
+          "enzyme-to-json": "3.3.5",
+          "intl": "1.2.5",
+          "lodash": "4.17.11",
+          "react-addons-test-utils": "15.6.2",
+          "react-dom": "16.8.4",
+          "react-intl": "2.8.0",
+          "react-router-dom": "4.3.1"
         },
         reviews: [
           {
@@ -570,6 +578,11 @@ export default courseSlug =>
               },
             ],
           },
+          {
+            "performedOn": "2019-03-07",
+            "performedBy": "Sam",
+            "scopeOfReview": "full course lesson review"
+          }
         ],
       },
       {
@@ -1873,10 +1886,33 @@ export default courseSlug =>
         },
       },
       {
-        slug: 'learn-how-to-use-immutable-js',
-        dependencies: {
-          immutable: '^3.8.1',
-        },
+        "slug": "learn-how-to-use-immutable-js",
+        "dependencies": {
+          "Lodash": "7.1.0",
+          "Jest": "^24.5.0",
+          "react": "7.0.0",
+          "react-dom": "7.1.0",
+          "immutable": "7.0.0",
+          "@babel/core": "7.4.0",
+          "@babel/preset-env": "^7.4.2",
+          "parcel-bundler": "^1.6.1"
+       },
+        "reviews": [
+          {
+            "performedOn": "2019-02-27",
+            "performedBy": "Sam",
+            "scopeOfReview": "full course lesson review",
+            "notes": [
+              {
+                "type": "minor issue",
+                "title": "CodeSandbox compatibility",
+                "details": "Removed JSBin support and added support for CodeSandbox",
+                "lessons": "all",
+                "dependency": "Lodash, Mocah, Chai, react, react-dom, immutable"
+              }
+            ]
+          }
+        ]  
       },
       {
         slug: 'get-started-with-postgresql',
