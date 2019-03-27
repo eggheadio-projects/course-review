@@ -242,9 +242,65 @@ export default courseSlug =>
       {
         slug: 'build-async-vue-js-apps-with-rxjs',
         dependencies: {
-          rxjs: '^5.0.0',
-          vue: '^2.0.0',
+          rxjs: '5.5.12 - 6.4.0',
+          'vue-rx': '5.0.0 - 6.1.0',
+          buefy: '0.6.7 - 0.7.3',
+          'sass-loader': '6.0.7 - 7.1.0',
+          vue: '^2.5.13',
+          'node-sass': '^4.7.2',
+          'vue-template-compiler': '^2.5.13',
+          '@vue/cli-plugin-babel': '^3.0.0-beta.6',
+          '@vue/cli-service': '^3.0.0-beta.6',
         },
+        reviews: [
+          {
+            performedOn: '2019-03-05',
+            performedBy: 21147,
+            scopeOfReview: 'full',
+            notes: [
+              {
+                type: 'minor issue',
+                title: '`.catch` replaced with `catchError`',
+                details:
+                  "The `.catch` method has been replaced with the `catchError` operator imported from `'rxjs/operators'`",
+                lessons: [],
+                dependency: 'rxjs',
+              },
+              {
+                type: 'major issue',
+                title: 'Observable methods imported separately',
+                details:
+                  'Methods that were once called off of `Observable` are now imported from `rxjs` directly. ',
+                lessons: [],
+                dependency: 'rxjs',
+              },
+              {
+                type: 'minor issue',
+                title: '`Rx` no longer has to be passed into `Vue.use`',
+                details:
+                  'vue-rx no longer requires `Rx` from RxJS to  be passed into `Vue.use` to simplify setup. ',
+                lessons: [],
+                dependency: 'vue-rx',
+              },
+              {
+                type: 'minor issue',
+                title: 'buefy.css path changed',
+                details:
+                  "The path to `buefy.css` is now `import 'buefy/dist/buefy.css'`",
+                lessons: [],
+                dependency: 'buefy',
+              },
+              {
+                type: 'major issue',
+                title: 'interval$.map replaced with interval$.pipe(map(...))',
+                details:
+                  "You can no longer use the `.` operator methods, instead, you must `import { ... } from 'rxjs/operators'` and then `.pipe` into the function. ",
+                lessons: [],
+                dependency: 'rxjs',
+              },
+            ],
+          },
+        ],
       },
       {
         slug: 'react-native-fundamentals',
